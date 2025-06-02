@@ -11,7 +11,7 @@ namespace WebReact.Configuração
     {
         public Contexto(DbContextOptions<Contexto> options ): base (options)
         {
-            Database.EnsureCreated();
+                Database.EnsureCreated();
         }
 
         public DbSet<Produto> Produto { get; set; }

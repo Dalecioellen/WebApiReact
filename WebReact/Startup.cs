@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WebReact.Configuração;
+using WebReact.ConfiguraÃ§Ã£o;
 
 namespace WebReact
 {
@@ -26,7 +26,7 @@ namespace WebReact
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         
             services.AddDbContext<Contexto>
-                (options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnections")));
+                (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnections")));
  
 
             // In production, the React files will be served from this directory

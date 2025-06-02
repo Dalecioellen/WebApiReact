@@ -76,10 +76,10 @@ namespace WebReact.Controllers
         // POST: api/Produtos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Produto>> PostProduto([FromForm] Produto produt)
+        public ActionResult<Produto> PostProduto([FromForm] Produto produt)
         {
             _context.Produto.Add(produt);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
             return CreatedAtAction("GetProduto", new { id = produt.Id }, produt);
         }

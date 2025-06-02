@@ -1,0 +1,17 @@
+body {
+  background-color: #ffe4e1; /* rosa claro */
+}
+
+.produtos-container {
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.produtos-table-wrapper {
+  overflow-x: auto;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
